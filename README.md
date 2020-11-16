@@ -33,7 +33,7 @@ Please see the detailed instructions in our [quick start guide](http://docs.absi
 ## Documentation
 Latest documentation can be found at our docs [page](http://docs.absio.com/#technologydata)
 
-The API reference is located at our Github [page](https://github.com/Absio/swift-absio-secured-container/).
+The API reference is located at our Github [page](https://absio.github.io/swift-absio-secured-container/).
 
 ## License
 Please visit our license page at [absio.com](http://docs.absio.com/#licenselicense)
