@@ -1,0 +1,145 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/vitaliy/work/temy/Projects/swift/AbsioSDK/AbsioSDK/Sources/Enums.swift",
+      "line": 17,
+      "symbol": "ActionType.accessed",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vitaliy/work/temy/Projects/swift/AbsioSDK/AbsioSDK/Sources/Enums.swift",
+      "line": 17,
+      "symbol": "ActionType.added",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vitaliy/work/temy/Projects/swift/AbsioSDK/AbsioSDK/Sources/Enums.swift",
+      "line": 17,
+      "symbol": "ActionType.deleted",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vitaliy/work/temy/Projects/swift/AbsioSDK/AbsioSDK/Sources/Enums.swift",
+      "line": 17,
+      "symbol": "ActionType.updated",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vitaliy/work/temy/Projects/swift/AbsioSDK/AbsioSDK/Sources/Enums.swift",
+      "line": 25,
+      "symbol": "EventType.container",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vitaliy/work/temy/Projects/swift/AbsioSDK/AbsioSDK/Sources/Enums.swift",
+      "line": 25,
+      "symbol": "EventType.keysFile",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vitaliy/work/temy/Projects/swift/AbsioSDK/AbsioSDK/Sources/Errors.swift",
+      "line": 27,
+      "symbol": "AbsioError.signingKeyNotFound(userId:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vitaliy/work/temy/Projects/swift/AbsioSDK/AbsioSDK/Sources/Errors.swift",
+      "line": 28,
+      "symbol": "AbsioError.sessionAlreadyInUse",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vitaliy/work/temy/Projects/swift/AbsioSDK/AbsioSDK/Sources/Errors.swift",
+      "line": 29,
+      "symbol": "AbsioError.internalError(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vitaliy/work/temy/Projects/swift/AbsioSDK/AbsioSDK/Sources/Errors.swift",
+      "line": 30,
+      "symbol": "AbsioError.recipientKeyBlobNotFoundForUser",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vitaliy/work/temy/Projects/swift/AbsioSDK/AbsioSDK/Sources/Errors.swift",
+      "line": 31,
+      "symbol": "AbsioError.argumentError(parameterName:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vitaliy/work/temy/Projects/swift/AbsioSDK/AbsioSDK/Sources/Errors.swift",
+      "line": 32,
+      "symbol": "AbsioError.encryptionError(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vitaliy/work/temy/Projects/swift/AbsioSDK/AbsioSDK/Sources/Errors.swift",
+      "line": 33,
+      "symbol": "AbsioError.serverError(errorType:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vitaliy/work/temy/Projects/swift/AbsioSDK/AbsioSDK/Sources/Errors.swift",
+      "line": 34,
+      "symbol": "AbsioError.codedError(errorType:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vitaliy/work/temy/Projects/swift/AbsioSDK/AbsioSDK/Sources/Errors.swift",
+      "line": 35,
+      "symbol": "AbsioError.notAuthenticatedError",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vitaliy/work/temy/Projects/swift/AbsioSDK/AbsioSDK/Sources/Errors.swift",
+      "line": 36,
+      "symbol": "AbsioError.activeDerivationKeyNotFoundForUser(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vitaliy/work/temy/Projects/swift/AbsioSDK/AbsioSDK/Sources/Errors.swift",
+      "line": 37,
+      "symbol": "AbsioError.ofsFileCreationException",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vitaliy/work/temy/Projects/swift/AbsioSDK/AbsioSDK/Sources/Errors.swift",
+      "line": 38,
+      "symbol": "AbsioError.databaseError(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vitaliy/work/temy/Projects/swift/AbsioSDK/AbsioSDK/Sources/Errors.swift",
+      "line": 39,
+      "symbol": "AbsioError.databaseIncorrectPasswordError",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vitaliy/work/temy/Projects/swift/AbsioSDK/AbsioSDK/Sources/Permissions.swift",
+      "line": 17,
+      "symbol": "Permissions.downloadContainer",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/vitaliy/work/temy/Projects/swift/AbsioSDK/AbsioSDK"
+}

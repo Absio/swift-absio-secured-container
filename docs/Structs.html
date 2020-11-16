@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Structures  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Section/Structures" class="dashAnchor"></a>
+    <a title="Structures  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">AbsioSDKiOS 1.0.0 Docs</a> (92% documented)</p>
+        <p class="header-right"><a href="https://github.com/Absio/swift-absio-secured-container"><img src="img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right">
+          <form role="search" action="search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">AbsioSDKiOS Reference</a>
+        <img id="carat" src="img/carat.png" />
+        Structures  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/AccessLevel.html">AccessLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/BaseProvider.html">BaseProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Container.html">Container</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/OfsProvider.html">OfsProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ServerCacheOfsProvider.html">ServerCacheOfsProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ServerProvider.html">ServerProvider</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/AbsioError.html">AbsioError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums.html#/s:11AbsioSDKiOS10ActionTypeO">ActionType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums.html#/s:11AbsioSDKiOS9EventTypeO">EventType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/AbsioProvider.html">AbsioProvider</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs/ContainerMetadata.html">ContainerMetadata</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Event.html">Event</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Permissions.html">Permissions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/PublicKey.html">PublicKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/SecuredContainer.html">SecuredContainer</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Structures</h1>
+            <p>The following structures are available globally.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AbsioSDKiOS17ContainerMetadataV"></a>
+                    <a name="//apple_ref/swift/Struct/ContainerMetadata" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AbsioSDKiOS17ContainerMetadataV">ContainerMetadata</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Descriptive information about a SecuredContainer/IContainer, including access, timestamps, length, categorical type and the ID.
+NOTE: while Absio typically thinks of the type field as a categorical descriptor of the container, it can take on any value desired.
+It is stored in the encrypted database in the OfsProvider and on the Absio Broker™ application&rsquo;s database for the ServerProvider.  It can
+be used to help access data or used for quick access to rules/control/etc associated with the container.</p>
+
+                        <a href="Structs/ContainerMetadata.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ContainerMetadata</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">ContainerMetadata</span> <span class="p">:</span> <span class="kt">Equatable</span><span class="p">,</span> <span class="kt">Hashable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AbsioSDKiOS5EventV"></a>
+                    <a name="//apple_ref/swift/Struct/Event" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AbsioSDKiOS5EventV">Event</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Represents a Container-related event tracked by the Absio Broker™ application.</p>
+
+                        <a href="Structs/Event.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Event</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AbsioSDKiOS9PublicKeyV"></a>
+                    <a name="//apple_ref/swift/Struct/PublicKey" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AbsioSDKiOS9PublicKeyV">PublicKey</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Public key representation</p>
+
+                        <a href="Structs/PublicKey.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">PublicKey</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">PublicKey</span> <span class="p">:</span> <span class="kt">Equatable</span><span class="p">,</span> <span class="kt">Hashable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AbsioSDKiOS11PermissionsV"></a>
+                    <a name="//apple_ref/swift/Struct/Permissions" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AbsioSDKiOS11PermissionsV">Permissions</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Represents various permissions that can be granted to a user with access to a SecuredContainer.
+These permissions will be enforced by the Absio Broker™ application when using the ServerProvider, and
+will restrict certain information from being shared with the user.  The OfsProvider will not
+enforce the adherence to the permissions.</p>
+
+                        <a href="Structs/Permissions.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Permissions</span> <span class="p">:</span> <span class="kt">OptionSet</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AbsioSDKiOS16SecuredContainerV"></a>
+                    <a name="//apple_ref/swift/Struct/SecuredContainer" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AbsioSDKiOS16SecuredContainerV">SecuredContainer</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This contains the Absio format of the encrypted content and header, its length, access levels corresponding metadata.</p>
+
+                        <a href="Structs/SecuredContainer.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">SecuredContainer</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2020 <a class="link" href="https://www.absio.com" target="_blank" rel="external">Absio</a>. All rights reserved. (Last updated: 2020-11-12)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>AbsioSDKiOS  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a title="AbsioSDKiOS  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">AbsioSDKiOS 1.0.0 Docs</a> (92% documented)</p>
+        <p class="header-right"><a href="https://github.com/Absio/swift-absio-secured-container"><img src="img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right">
+          <form role="search" action="search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">AbsioSDKiOS Reference</a>
+        <img id="carat" src="img/carat.png" />
+        AbsioSDKiOS  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/AccessLevel.html">AccessLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/BaseProvider.html">BaseProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Container.html">Container</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/OfsProvider.html">OfsProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ServerCacheOfsProvider.html">ServerCacheOfsProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ServerProvider.html">ServerProvider</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/AbsioError.html">AbsioError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums.html#/s:11AbsioSDKiOS10ActionTypeO">ActionType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums.html#/s:11AbsioSDKiOS9EventTypeO">EventType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/AbsioProvider.html">AbsioProvider</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs/ContainerMetadata.html">ContainerMetadata</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Event.html">Event</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Permissions.html">Permissions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/PublicKey.html">PublicKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/SecuredContainer.html">SecuredContainer</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='a-href-https-www-absio-com-img-src-logo-png-alt-absiosdk-a' class='heading'><a href="https://www.absio.com"><img src="logo.png" alt="AbsioSdk"></a></h1>
+<h1 id='absio-swift-sdk' class='heading'>Absio Swift SDK</h1>
+
+<p>Absio Swift SDK is a part of Absio’s developer toolset which developers can use to build PKI-based authentication and data-level encryption directly into software applications and services, without having to manage keys and certificates, add hardware, or rely on a third-party service. </p>
+<h2 id='basics' class='heading'>Basics</h2>
+
+<p>Genaral technology overview and toolset can be found <a href="http://docs.absio.com/#technologytools">here</a></p>
+<h2 id='requirements' class='heading'>Requirements</h2>
+
+<ul>
+<li>iOS 12.0 and higher</li>
+<li>macOs 10.14 and higher</li>
+<li>Xcode 11.7 and higher</li>
+<li>Swift 5 and higher</li>
+</ul>
+<h2 id='installation' class='heading'>Installation</h2>
+
+<p>Currently we are supporting CocoaPods. 
+If you are new to using pods please visit getting started <a href="https://guides.cocoapods.org/using/getting-started.html">page</a>.</p>
+
+<p>To get our pod instantly please use line below</p>
+<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s1">'AbsioSDK'</span><span class="p">,</span> <span class="s1">'~&gt; 1.0.0'</span>
+</code></pre>
+<h4 id='strong-note-strong' class='heading'><strong>Note:</strong></h4>
+
+<p>We are distributing fat libraries to support both simulator and different architectures. If you will have <strong>issues with validation/submitting</strong> your application to App Store. Please insert content of <a href="cut-architectures.sh">cut-architectures.sh</a> into &lsquo;Build Phases&rsquo; of your application with &lsquo;New Run Script Phase&rsquo;. This will strip unused architectures for simulators and validation should went smooth.</p>
+<h2 id='getting-started' class='heading'>Getting started</h2>
+
+<p>Please see the detailed instructions in our <a href="http://docs.absio.com/#quickstartstart">quick start guide</a></p>
+<h2 id='documentation' class='heading'>Documentation</h2>
+
+<p>Latest documentation can be found at our docs <a href="http://docs.absio.com/#technologydata">page</a></p>
+
+<p>The API reference is located at our Github <a href="https://github.com/Absio/swift-absio-secured-container/">page</a>.</p>
+<h2 id='license' class='heading'>License</h2>
+
+<p>Please visit our license page at <a href="http://docs.absio.com/#licenselicense">absio.com</a></p>
+<h2 id='getting-help' class='heading'>Getting Help</h2>
+
+<ul>
+<li><p>Please contact us at <a href="mailto:support@absio.com">support@absio.com</a> if you experience issues, want to submit feedback, or have general questions about the technology</p></li>
+<li><p>Have a bug to report? <a href="https://github.com/Absio/swift-absio-secured-container/issues">Open an issue</a>. If possible, include the version of Absio SDK, a full log, and description on how to reproduce.</p></li>
+</ul>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2020 <a class="link" href="https://www.absio.com" target="_blank" rel="external">Absio</a>. All rights reserved. (Last updated: 2020-11-12)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

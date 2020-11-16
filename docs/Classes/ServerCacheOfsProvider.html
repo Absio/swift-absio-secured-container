@@ -1,0 +1,2612 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ServerCacheOfsProvider Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/ServerCacheOfsProvider" class="dashAnchor"></a>
+    <a title="ServerCacheOfsProvider Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">AbsioSDKiOS 1.0.0 Docs</a> (92% documented)</p>
+        <p class="header-right"><a href="https://github.com/Absio/swift-absio-secured-container"><img src="../img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">AbsioSDKiOS Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        ServerCacheOfsProvider Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AccessLevel.html">AccessLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BaseProvider.html">BaseProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Container.html">Container</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OfsProvider.html">OfsProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ServerCacheOfsProvider.html">ServerCacheOfsProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ServerProvider.html">ServerProvider</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/AbsioError.html">AbsioError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums.html#/s:11AbsioSDKiOS10ActionTypeO">ActionType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums.html#/s:11AbsioSDKiOS9EventTypeO">EventType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/AbsioProvider.html">AbsioProvider</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/ContainerMetadata.html">ContainerMetadata</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Event.html">Event</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Permissions.html">Permissions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/PublicKey.html">PublicKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SecuredContainer.html">SecuredContainer</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>ServerCacheOfsProvider</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ServerCacheOfsProvider</span> <span class="p">:</span> <span class="kt"><a href="../Classes/BaseProvider.html">BaseProvider</a></span></code></pre>
+
+                </div>
+              </div>
+            <p>Data provider that combines the ServerProvider and the OfsProvider.  The ServerProvider is treated and the main source for all data.
+    The OfsProvider is treated as a cache.  So, all create and update operations will be performed on the Absio Broker™ application and then
+    cached in the OFS.  All delete operations will be done against both the Absio Broker™ application and the OFS.  All read operations will
+    attempt to pull from the OFS (cache) and then from the Absio Broker™ application if not found.  Use the ForceLoadFromServer property
+    if you want read operations to skip the cache.  NOTE: the read will still cache the value in the OFS.  It will simply ensure
+    the data is refreshed from the Absio Broker™ application.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Properties."></a>
+                <a name="//apple_ref/swift/Section/Properties." class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Properties."></a>
+                  <h3 class="section-name"><p>Properties.</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AbsioSDKiOS22ServerCacheOfsProviderC013forceLoadFromD0Sbvp"></a>
+                    <a name="//apple_ref/swift/Property/forceLoadFromServer" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AbsioSDKiOS22ServerCacheOfsProviderC013forceLoadFromD0Sbvp">forceLoadFromServer</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A flag that determines the usage of the OfsProvider as a source on read operations.  When true, this will skip the OfsProvider
+and load data from the ServerProvider.  However, newly read data will still be cached in the OFS.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">forceLoadFromServer</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Initializers"></a>
+                <a name="//apple_ref/swift/Section/Initializers" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Initializers"></a>
+                  <h3 class="section-name"><p>Initializers</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AbsioSDKiOS22ServerCacheOfsProviderC6apiKey9serverUrl15applicationName16ofsRootDirectory19partitionDataByUserAC10Foundation4UUIDV_AI3URLVSSAMSbtKcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(apiKey:serverUrl:applicationName:ofsRootDirectory:partitionDataByUser:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AbsioSDKiOS22ServerCacheOfsProviderC6apiKey9serverUrl15applicationName16ofsRootDirectory19partitionDataByUserAC10Foundation4UUIDV_AI3URLVSSAMSbtKcfc">init(apiKey:<wbr>serverUrl:<wbr>applicationName:<wbr>ofsRootDirectory:<wbr>partitionDataByUser:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    AbsioError
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">apiKey</span><span class="p">:</span> <span class="kt">UUID</span><span class="p">,</span> <span class="nv">serverUrl</span><span class="p">:</span> <span class="kt">URL</span><span class="p">,</span> <span class="nv">applicationName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">ofsRootDirectory</span><span class="p">:</span> <span class="kt">URL</span> <span class="o">=</span> <span class="kt"><a href="../Classes/OfsProvider.html">OfsProvider</a></span><span class="o">.</span><span class="n">defaultOfsURL</span><span class="p">,</span> <span class="nv">partitionDataByUser</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>apiKey</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The API Key needed for accessing the Absio Broker application</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>serverUrl</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The URL of the Absio Broker application.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>applicationName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A unique name for the application. This is optional, but is helpful if debugging requests on the Absio Broker application.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>ofsRootDirectory</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The root of OFS</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>partitionDataByUser</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A flag that determines the usage of the OfsProvider as a source on read operations.  When true, this will skip the OfsProvider and load data from the ServerProvider.  However, newly read data will still be cached in the OFS.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/User%20operations."></a>
+                <a name="//apple_ref/swift/Section/User operations." class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/User%20operations."></a>
+                  <h3 class="section-name"><p>User operations.</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AbsioSDKiOS22ServerCacheOfsProviderC5logIn6userId8password10passphrase10PromiseKit0N0Cy10Foundation4DataVGAK4UUIDV_SSSgAQtKF"></a>
+                    <a name="//apple_ref/swift/Method/logIn(userId:password:passphrase:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AbsioSDKiOS22ServerCacheOfsProviderC5logIn6userId8password10passphrase10PromiseKit0N0Cy10Foundation4DataVGAK4UUIDV_SSSgAQtKF">logIn(userId:<wbr>password:<wbr>passphrase:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Authenticates the user by calling login on both the OfsProvider and the ServerProvider.  If the
+User does not have their KeyFile in the OFS yet, it will be pulled from the server.  The KeyRing will
+be used to authenticate with the Absio Broker application.  This will create an authenticated session on
+the ServerProvider and the OfsProvider.  If the KeyFile has not been stored in the OFS yet, you must supply
+the passphrase.
+This will throw an exception on failure.  When successful the session will be authenticated.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>AbsioError</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">logIn</span><span class="p">(</span><span class="nv">userId</span><span class="p">:</span> <span class="kt">UUID</span><span class="p">,</span> <span class="nv">password</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">passphrase</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Promise</span><span class="o">&lt;</span><span class="kt">Data</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>userId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The user&rsquo;s ID.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>password</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Optional. The user&rsquo;s password.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>passphrase</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Optional. The user&rsquo;s backup credential passphrase. This is used if logging into a device for
+the first time or if the password is unavailable.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The encrypted KeyFile data</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AbsioSDKiOS22ServerCacheOfsProviderC5logIn7keyRing10PromiseKit0L0CyytG0a7CryptoiC003KeyK0V_tKF"></a>
+                    <a name="//apple_ref/swift/Method/logIn(keyRing:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AbsioSDKiOS22ServerCacheOfsProviderC5logIn7keyRing10PromiseKit0L0CyytG0a7CryptoiC003KeyK0V_tKF">logIn(keyRing:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Uses the provided KeyRing to authenticate with the Absio Broker application.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>AbsioError</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">logIn</span><span class="p">(</span><span class="nv">keyRing</span><span class="p">:</span> <span class="kt">KeyRing</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Promise</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>keyRing</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The user&rsquo;s private key ring.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AbsioSDKiOS22ServerCacheOfsProviderC8register8password10passphrase8reminder10PromiseKit0L0Cy10Foundation4DataVGSS_S2SSgtKF"></a>
+                    <a name="//apple_ref/swift/Method/register(password:passphrase:reminder:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AbsioSDKiOS22ServerCacheOfsProviderC8register8password10passphrase8reminder10PromiseKit0L0Cy10Foundation4DataVGSS_S2SSgtKF">register(password:<wbr>passphrase:<wbr>reminder:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Registers a user on the Absio Broker application and then in the OFS.
+This will throw an exception on failure.  When successful the session will be authenticated.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>AbsioError</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">register</span><span class="p">(</span><span class="nv">password</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">passphrase</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">reminder</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Promise</span><span class="o">&lt;</span><span class="kt">Data</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>password</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The password used to encrypt the KeyRing portion of the KeyFile.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>passphrase</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The passphrase used to encrypt the password portion of the KeyFile.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>reminder</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Optional.  The reminder.  This can be used to help remember the users passphrase.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The encrypted KeyFile data</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AbsioSDKiOS22ServerCacheOfsProviderC17changeCredentials8password10passphrase0K8Reminder10PromiseKit0M0Cy10Foundation4DataVGSS_S2SSgtKF"></a>
+                    <a name="//apple_ref/swift/Method/changeCredentials(password:passphrase:passphraseReminder:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AbsioSDKiOS22ServerCacheOfsProviderC17changeCredentials8password10passphrase0K8Reminder10PromiseKit0M0Cy10Foundation4DataVGSS_S2SSgtKF">changeCredentials(password:<wbr>passphrase:<wbr>passphraseReminder:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This will change the credentials using the ServerProvider.  The resultant KeyFile bytes will be used to update the
+KeyFile in the Ofs using the OfsProviders OfsKeyFileMapper.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>AbsioError</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">changeCredentials</span><span class="p">(</span><span class="nv">password</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">passphrase</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">passphraseReminder</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Promise</span><span class="o">&lt;</span><span class="kt">Data</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>password</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The new password</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>passphrase</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The new passphrase</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>passphraseReminder</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Optional.  The reminder to help a user recall their passphrase.  Defaults to null.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The encrypted KeyFile data</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AbsioSDKiOS22ServerCacheOfsProviderC10deleteUser10PromiseKit0J0CyytGyKF"></a>
+                    <a name="//apple_ref/swift/Method/deleteUser()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AbsioSDKiOS22ServerCacheOfsProviderC10deleteUser10PromiseKit0J0CyytGyKF">deleteUser()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Deletes all associated data for the authenticated user.  Calls DeleteUser on the ServerProvider and
+the OfsProvider.
+NOTE: This cannot be undone.  Ensure you really want to perform this operation before doing so.
+All data related to the user will be removed from the Absio Broker application.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    AbsioError
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">override</span> <span class="kd">func</span> <span class="nf">deleteUser</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Promise</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AbsioSDKiOS22ServerCacheOfsProviderC9getEvents9eventType11containerId0lK005startM003endM010PromiseKit0P0CySayAA5EventVGGAA0rK0OSg_10Foundation4UUIDVSgSSSgSiSgAYtKF"></a>
+                    <a name="//apple_ref/swift/Method/getEvents(eventType:containerId:containerType:startId:endId:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AbsioSDKiOS22ServerCacheOfsProviderC9getEvents9eventType11containerId0lK005startM003endM010PromiseKit0P0CySayAA5EventVGGAA0rK0OSg_10Foundation4UUIDVSgSSSgSiSgAYtKF">getEvents(eventType:<wbr>containerId:<wbr>containerType:<wbr>startId:<wbr>endId:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This will call GetEvents on the ServerProvider.
+Gets all ContainerEvents that match the action type, starting id, ending id, container id and type.
+No parameters are required.  If none are supplied this will return all ContainerEvents for all time for
+the authenticated user.  This can be used to synchronize accounts or keep a store up-to-date with the
+latest container activity related to the user.
+Calling this method requires an authenticated session.  See login for authenticating.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>AbsioError</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getEvents</span><span class="p">(</span><span class="nv">eventType</span><span class="p">:</span> <span class="kt"><a href="../Enums.html#/s:11AbsioSDKiOS9EventTypeO">EventType</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">containerId</span><span class="p">:</span> <span class="kt">UUID</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">containerType</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">startId</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">endId</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Promise</span><span class="o">&lt;</span><span class="p">[</span><span class="kt"><a href="../Structs/Event.html">Event</a></span><span class="p">]</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>eventType</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The event types you are interested in.  Default is all actions</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>containerId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The container ID to get events for.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>containerType</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The type field value to get events for.  Only will return events with an exact match on the type.  Default is null, meaning all events.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>startId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The starting event id to process.  Defaults to the very first event.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>endId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The last event id to process.  Defaults to null, meaning get all events since the starting id.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A array of events that match the given criteria.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AbsioSDKiOS22ServerCacheOfsProviderC11getReminder6userId10PromiseKit0L0CySSG10Foundation4UUIDVSg_tKF"></a>
+                    <a name="//apple_ref/swift/Method/getReminder(userId:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AbsioSDKiOS22ServerCacheOfsProviderC11getReminder6userId10PromiseKit0L0CySSG10Foundation4UUIDVSg_tKF">getReminder(userId:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This will call GetReminder on the ServerProvider. Gets the reminder for a user.  The reminder can be used to help a user recall their passphrase. If the session is authenticated the user ID is not required.  If not supplied the authenticated user&rsquo;s ID will be used.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>AbsioError</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getReminder</span><span class="p">(</span><span class="nv">userId</span><span class="p">:</span> <span class="kt">UUID</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Promise</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>userId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Optional.  The user ID.  If not supplied the authenticated user&rsquo;s ID will be used.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The user&rsquo;s reminder.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AbsioSDKiOS22ServerCacheOfsProviderC17needToSyncAccount6userId10PromiseKit0N0CySbG10Foundation4UUIDV_tKF"></a>
+                    <a name="//apple_ref/swift/Method/needToSyncAccount(userId:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AbsioSDKiOS22ServerCacheOfsProviderC17needToSyncAccount6userId10PromiseKit0N0CySbG10Foundation4UUIDV_tKF">needToSyncAccount(userId:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This will check to see if the KeyFile stored in the OFS differs from the KeyFile stored on the Absio Broker application.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>AbsioError</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">needToSyncAccount</span><span class="p">(</span><span class="nv">userId</span><span class="p">:</span> <span class="kt">UUID</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Promise</span><span class="o">&lt;</span><span class="kt">Bool</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>userId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The user ID of the account to check.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>True if the KeyFile stored in the OFS differs from the KeyFile stored on the Absio Broker application.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AbsioSDKiOS22ServerCacheOfsProviderC18synchronizeAccount10passphrase8password10PromiseKit0L0CyytGSS_SSSgtKF"></a>
+                    <a name="//apple_ref/swift/Method/synchronizeAccount(passphrase:password:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AbsioSDKiOS22ServerCacheOfsProviderC18synchronizeAccount10passphrase8password10PromiseKit0L0CyytGSS_SSSgtKF">synchronizeAccount(passphrase:<wbr>password:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This pulls the KeyFile from the Absio Broker application, stores it into the OFS and then updates the KeyRing in use on the ServerProvider and the OfsProvider.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>AbsioError</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">synchronizeAccount</span><span class="p">(</span><span class="nv">passphrase</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">password</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Promise</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>passphrase</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The passphrase used to store the KeyFile on the Absio Broker application.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>password</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The password used to encrypt the KeyFile on the Absio Broker application.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AbsioSDKiOS22ServerCacheOfsProviderC6logout10PromiseKit0I0CyytGyKF"></a>
+                    <a name="//apple_ref/swift/Method/logout()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AbsioSDKiOS22ServerCacheOfsProviderC6logout10PromiseKit0I0CyytGyKF">logout()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This will end the authenticated session by calling Logout on the ServerProvider and the OfsProvider</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    AbsioError
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">override</span> <span class="kd">func</span> <span class="nf">logout</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Promise</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Container%20operations."></a>
+                <a name="//apple_ref/swift/Section/Container operations." class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Container%20operations."></a>
+                  <h3 class="section-name"><p>Container operations.</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AbsioSDKiOS22ServerCacheOfsProviderC15createContainer7content12accessLevels4type10PromiseKit0N0CyAA07SecuredI0VG10Foundation4DataVSg_SayAA11AccessLevelCGSSSgtKF"></a>
+                    <a name="//apple_ref/swift/Method/createContainer(content:accessLevels:type:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AbsioSDKiOS22ServerCacheOfsProviderC15createContainer7content12accessLevels4type10PromiseKit0N0CyAA07SecuredI0VG10Foundation4DataVSg_SayAA11AccessLevelCGSSSgtKF">createContainer(content:<wbr>accessLevels:<wbr>type:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates and persists a new SecuredContainer on the Absio Broker application, caches it in the OFS and returns it.
+Use the returned value to learn the assigned ID.
+Calling this method requires an authenticated session.  See login for authenticating.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>AbsioError</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">override</span> <span class="kd">func</span> <span class="nf">createContainer</span><span class="p">(</span><span class="nv">content</span><span class="p">:</span> <span class="kt">Data</span><span class="p">?,</span> <span class="nv">accessLevels</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/AccessLevel.html">AccessLevel</a></span><span class="p">]</span> <span class="o">=</span> <span class="p">[],</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Promise</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/SecuredContainer.html">SecuredContainer</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>content</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The container payload.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>accessLevels</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Optional. This is the defined access for all users.  If null, the user creating the container will get full access
+(ContainerAccessLevel.DefaultOwnerPermissions). If any access is defined then the user creating the container
+will get the defined access or no access if none is defined.  By default this list is null.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>type</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Optional string used to categorize the Container. Default: nil.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The created SecuredContainer.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AbsioSDKiOS22ServerCacheOfsProviderC15createContainer7content18customHeaderObject12accessLevels4type10PromiseKit0Q0CyAA07SecuredI0VG10Foundation4DataVSg_xSgSayAA11AccessLevelCGSSSgtKSeRzSERzlF"></a>
+                    <a name="//apple_ref/swift/Method/createContainer(content:customHeaderObject:accessLevels:type:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AbsioSDKiOS22ServerCacheOfsProviderC15createContainer7content18customHeaderObject12accessLevels4type10PromiseKit0Q0CyAA07SecuredI0VG10Foundation4DataVSg_xSgSayAA11AccessLevelCGSSSgtKSeRzSERzlF">createContainer(content:<wbr>customHeaderObject:<wbr>accessLevels:<wbr>type:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates and persists a new SecuredContainer on the Absio Broker application, caches it in the OFS and returns it.
+Use the returned value to learn the assigned ID.
+Calling this method requires an authenticated session.  See login for authenticating.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>AbsioError</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">override</span> <span class="kd">func</span> <span class="n">createContainer</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">content</span><span class="p">:</span> <span class="kt">Data</span><span class="p">?,</span> <span class="nv">customHeaderObject</span><span class="p">:</span> <span class="kt">T</span><span class="p">?,</span> <span class="nv">accessLevels</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/AccessLevel.html">AccessLevel</a></span><span class="p">]</span> <span class="o">=</span> <span class="p">[],</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Promise</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/SecuredContainer.html">SecuredContainer</a></span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt">Decodable</span><span class="p">,</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt">Encodable</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>content</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The container payload.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>customHeaderObject</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The optional header portion of the container. This Codable object will be serialized. Default: nil.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>accessLevels</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Optional. This is the defined access for all users.  If null, the user creating the container will get full access
+(ContainerAccessLevel.DefaultOwnerPermissions). If any access is defined then the user creating the container
+will get the defined access or no access if none is defined.  By default this list is null.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>type</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Optional string used to categorize the Container. Default: nil.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The created SecuredContainer.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AbsioSDKiOS22ServerCacheOfsProviderC15deleteContainer11containerId10PromiseKit0L0CyytG10Foundation4UUIDV_tKF"></a>
+                    <a name="//apple_ref/swift/Method/deleteContainer(containerId:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AbsioSDKiOS22ServerCacheOfsProviderC15deleteContainer11containerId10PromiseKit0L0CyytG10Foundation4UUIDV_tKF">deleteContainer(containerId:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Deletes the container with the given ID from the Absio Broker application and the OFS by calling Delete on the
+ServerProvider and the OfsProvider.
+Calling this method requires an authenticated session.  See login for authenticating.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>AbsioError</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">override</span> <span class="kd">func</span> <span class="nf">deleteContainer</span><span class="p">(</span><span class="nv">containerId</span><span class="p">:</span> <span class="kt">UUID</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Promise</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>containerId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The ID of the container.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AbsioSDKiOS22ServerCacheOfsProviderC21updateContainerHeader11containerId06customJ6Object10PromiseKit0O0CyAA07SecuredI0VG10Foundation4UUIDV_xSgtKSeRzSERzlF"></a>
+                    <a name="//apple_ref/swift/Method/updateContainerHeader(containerId:customHeaderObject:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AbsioSDKiOS22ServerCacheOfsProviderC21updateContainerHeader11containerId06customJ6Object10PromiseKit0O0CyAA07SecuredI0VG10Foundation4UUIDV_xSgtKSeRzSERzlF">updateContainerHeader(containerId:<wbr>customHeaderObject:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Update the header of the secured container with the given ID on the Absio Broker application
+and then cache the resulting container in the OFS.
+Calling this method requires an authenticated session.  See login for authenticating.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>AbsioError</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">override</span> <span class="kd">func</span> <span class="n">updateContainerHeader</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">containerId</span><span class="p">:</span> <span class="kt">UUID</span><span class="p">,</span> <span class="nv">customHeaderObject</span><span class="p">:</span> <span class="kt">T</span><span class="p">?)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Promise</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/SecuredContainer.html">SecuredContainer</a></span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt">Decodable</span><span class="p">,</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt">Encodable</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>containerId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The ID of the container.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>customHeaderObject</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Optional. The header Codable to be encrypted in the secured container.  If not supplied the header will be nil.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The updated SecuredContainer.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AbsioSDKiOS22ServerCacheOfsProviderC22updateContainerContent11containerId7content10PromiseKit0N0CyAA07SecuredI0VG10Foundation4UUIDV_AM4DataVSgtKF"></a>
+                    <a name="//apple_ref/swift/Method/updateContainerContent(containerId:content:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AbsioSDKiOS22ServerCacheOfsProviderC22updateContainerContent11containerId7content10PromiseKit0N0CyAA07SecuredI0VG10Foundation4UUIDV_AM4DataVSgtKF">updateContainerContent(containerId:<wbr>content:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Update the content of the secured container with the given ID on the Absio Broker application
+and then cache the resulting container in the OFS.
+Calling this method requires an authenticated session.  See login for authenticating.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>AbsioError</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">override</span> <span class="kd">func</span> <span class="nf">updateContainerContent</span><span class="p">(</span><span class="nv">containerId</span><span class="p">:</span> <span class="kt">UUID</span><span class="p">,</span> <span class="nv">content</span><span class="p">:</span> <span class="kt">Data</span><span class="p">?)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Promise</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/SecuredContainer.html">SecuredContainer</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>containerId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The ID of the secured container.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>content</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Optional.  The content to be encrypted in the secured container.  If not supplied the content will be null.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The updated SecuredContainer.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AbsioSDKiOS22ServerCacheOfsProviderC15updateContainer11containerId7content18customHeaderObject12accessLevels4type10PromiseKit0S0CyAA07SecuredI0VG10Foundation4UUIDV_AP4DataVSgxSgSayAA11AccessLevelCGSSSgtKSeRzSERzlF"></a>
+                    <a name="//apple_ref/swift/Method/updateContainer(containerId:content:customHeaderObject:accessLevels:type:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AbsioSDKiOS22ServerCacheOfsProviderC15updateContainer11containerId7content18customHeaderObject12accessLevels4type10PromiseKit0S0CyAA07SecuredI0VG10Foundation4UUIDV_AP4DataVSgxSgSayAA11AccessLevelCGSSSgtKSeRzSERzlF">updateContainer(containerId:<wbr>content:<wbr>customHeaderObject:<wbr>accessLevels:<wbr>type:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Update the content, header, access and type of the secured container with the given ID on the Absio Broker application
+and then cache the resulting container in the OFS.
+Calling this method requires an authenticated session.  See login for authenticating.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>AbsioError</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">override</span> <span class="kd">func</span> <span class="n">updateContainer</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">containerId</span><span class="p">:</span> <span class="kt">UUID</span><span class="p">,</span> <span class="nv">content</span><span class="p">:</span> <span class="kt">Data</span><span class="p">?,</span> <span class="nv">customHeaderObject</span><span class="p">:</span> <span class="kt">T</span><span class="p">?,</span> <span class="nv">accessLevels</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/AccessLevel.html">AccessLevel</a></span><span class="p">]</span> <span class="o">=</span> <span class="p">[],</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Promise</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/SecuredContainer.html">SecuredContainer</a></span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt">Decodable</span><span class="p">,</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt">Encodable</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>containerId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The ID of the secured container.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>content</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The container payload.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>customHeaderObject</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The optional header portion of the container. This object will be serialized as JSON. Default: null.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>accessLevels</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Optional. This is the defined access for all users.  If null, the user creating the container will get full access
+(ContainerAccessLevel.DefaultOwnerPermissions). If any access is defined then the user creating the container
+will get the defined access or no access if none is defined.  By default this list has one access level for creator with default permissions.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>type</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Optional string used to categorize the Container. Default: nil.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The updated SecuredContainer.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AbsioSDKiOS22ServerCacheOfsProviderC27updateContainerAccessLevels11containerId06accessK010PromiseKit0O0CyytG10Foundation4UUIDV_SayAA0J5LevelCGtKF"></a>
+                    <a name="//apple_ref/swift/Method/updateContainerAccessLevels(containerId:accessLevels:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AbsioSDKiOS22ServerCacheOfsProviderC27updateContainerAccessLevels11containerId06accessK010PromiseKit0O0CyytG10Foundation4UUIDV_SayAA0J5LevelCGtKF">updateContainerAccessLevels(containerId:<wbr>accessLevels:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Update the access of the secured container with the given ID on the Absio Broker application
+and then cache the resulting container in the OFS.
+Calling this method requires an authenticated session.  See login for authenticating.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>AbsioError</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">override</span> <span class="kd">func</span> <span class="nf">updateContainerAccessLevels</span><span class="p">(</span><span class="nv">containerId</span><span class="p">:</span> <span class="kt">UUID</span><span class="p">,</span> <span class="nv">accessLevels</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/AccessLevel.html">AccessLevel</a></span><span class="p">]</span> <span class="o">=</span> <span class="p">[])</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Promise</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>containerId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The ID of the secured container.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>accessLevels</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Optional. This is the defined access for all users.  If null, the user updating the container will get full access
+(ContainerAccessLevel.DefaultOwnerPermissions). If any access is defined then the user creating the container
+will get the defined access or no access if none is defined.  By default this list is null.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The updated SecuredContainer.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AbsioSDKiOS22ServerCacheOfsProviderC12getContainer11containerId10PromiseKit0L0CyAA0I0CG10Foundation4UUIDV_tKF"></a>
+                    <a name="//apple_ref/swift/Method/getContainer(containerId:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AbsioSDKiOS22ServerCacheOfsProviderC12getContainer11containerId10PromiseKit0L0CyAA0I0CG10Foundation4UUIDV_tKF">getContainer(containerId:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>If the ForceLoadFromServer property is false this gets the Container from the OFS.  If the ForceLoadFromServer
+is true or the OFS does not have the container, it is pulled from the server, cached in the OFS and returned
+to the user.
+Calling this method requires an authenticated session.  See login for authenticating.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>AbsioError</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">override</span> <span class="kd">func</span> <span class="nf">getContainer</span><span class="p">(</span><span class="nv">containerId</span><span class="p">:</span> <span class="kt">UUID</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Promise</span><span class="o">&lt;</span><span class="kt"><a href="../Classes/Container.html">Container</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>containerId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The ID of the secured container.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Container with content, header, and container metadata.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AbsioSDKiOS22ServerCacheOfsProviderC18getContainerHeader11containerId10PromiseKit0M0Cy0a7CryptoiC00J0CSgG10Foundation4UUIDV_tKF"></a>
+                    <a name="//apple_ref/swift/Method/getContainerHeader(containerId:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AbsioSDKiOS22ServerCacheOfsProviderC18getContainerHeader11containerId10PromiseKit0M0Cy0a7CryptoiC00J0CSgG10Foundation4UUIDV_tKF">getContainerHeader(containerId:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>If the ForceLoadFromServer property is false this gets the Container header from the OFS.  If the ForceLoadFromServer
+is true or the OFS does not have the container, it is pulled from the server, cached in the OFS and returned
+to the user.
+Calling this method requires an authenticated session.  See login for authenticating.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>AbsioError</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">override</span> <span class="kd">func</span> <span class="nf">getContainerHeader</span><span class="p">(</span><span class="nv">containerId</span><span class="p">:</span> <span class="kt">UUID</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Promise</span><span class="o">&lt;</span><span class="kt">Header</span><span class="p">?</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>containerId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The ID of the secured container.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The decrypted header from the container.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AbsioSDKiOS22ServerCacheOfsProviderC19getContainerContent11containerId10PromiseKit0M0Cy10Foundation4DataVSgGAI4UUIDV_tKF"></a>
+                    <a name="//apple_ref/swift/Method/getContainerContent(containerId:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AbsioSDKiOS22ServerCacheOfsProviderC19getContainerContent11containerId10PromiseKit0M0Cy10Foundation4DataVSgGAI4UUIDV_tKF">getContainerContent(containerId:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>If the ForceLoadFromServer property is false this gets the Container content from the OFS.  If the ForceLoadFromServer
+is true or the OFS does not have the container, it is pulled from the server, cached in the OFS and returned
+to the user.
+Calling this method requires an authenticated session.  See logIn for authenticating.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>AbsioError</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">override</span> <span class="kd">func</span> <span class="nf">getContainerContent</span><span class="p">(</span><span class="nv">containerId</span><span class="p">:</span> <span class="kt">UUID</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Promise</span><span class="o">&lt;</span><span class="kt">Data</span><span class="p">?</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>containerId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The ID of the secured container.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The decrypted content from the container.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AbsioSDKiOS22ServerCacheOfsProviderC20getContainerMetadata11containerId10PromiseKit0M0CyAA0I0CG10Foundation4UUIDV_tKF"></a>
+                    <a name="//apple_ref/swift/Method/getContainerMetadata(containerId:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AbsioSDKiOS22ServerCacheOfsProviderC20getContainerMetadata11containerId10PromiseKit0M0CyAA0I0CG10Foundation4UUIDV_tKF">getContainerMetadata(containerId:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>If the ForceLoadFromServer property is false this gets the Container content from the OFS.  If the ForceLoadFromServer
+is true or the OFS does not have the container, it is pulled from the server, cached in the OFS and returned
+to the user.
+Calling this method requires an authenticated session.  See login for authenticating.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>AbsioError</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">override</span> <span class="kd">func</span> <span class="nf">getContainerMetadata</span><span class="p">(</span><span class="nv">containerId</span><span class="p">:</span> <span class="kt">UUID</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Promise</span><span class="o">&lt;</span><span class="kt"><a href="../Classes/Container.html">Container</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>containerId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The ID of the secured container.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The metadata for the requested container.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AbsioSDKiOS22ServerCacheOfsProviderC19updateContainerType11containerId4type10PromiseKit0N0CyytG10Foundation4UUIDV_SSSgtKF"></a>
+                    <a name="//apple_ref/swift/Method/updateContainerType(containerId:type:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AbsioSDKiOS22ServerCacheOfsProviderC19updateContainerType11containerId4type10PromiseKit0N0CyytG10Foundation4UUIDV_SSSgtKF">updateContainerType(containerId:<wbr>type:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Update the type of the secured container with the given ID on the Absio Broker application
+and then cache the resulting container in the OFS.
+Calling this method requires an authenticated session.  See login for authenticating.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>AbsioError</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">override</span> <span class="kd">func</span> <span class="nf">updateContainerType</span><span class="p">(</span><span class="nv">containerId</span><span class="p">:</span> <span class="kt">UUID</span><span class="p">,</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Promise</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>containerId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The ID of the secured container.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>type</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Optional. This is used to categorize the Container. Default: nil.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The updated SecuredContainer.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Sync%20operations."></a>
+                <a name="//apple_ref/swift/Section/Sync operations." class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Sync%20operations."></a>
+                  <h3 class="section-name"><p>Sync operations.</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AbsioSDKiOS22ServerCacheOfsProviderC5logIn6userId8password10passphrase17completionHandler05errorO05queueACXD10Foundation4UUIDV_SSSgANyAK4DataVcys5Error_pcSo0c10_dispatch_Q0CSgtKF"></a>
+                    <a name="//apple_ref/swift/Method/logIn(userId:password:passphrase:completionHandler:errorHandler:queue:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AbsioSDKiOS22ServerCacheOfsProviderC5logIn6userId8password10passphrase17completionHandler05errorO05queueACXD10Foundation4UUIDV_SSSgANyAK4DataVcys5Error_pcSo0c10_dispatch_Q0CSgtKF">logIn(userId:<wbr>password:<wbr>passphrase:<wbr>completionHandler:<wbr>errorHandler:<wbr>queue:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Authenticates the user by calling login on both the OfsProvider and the ServerProvider.  If the
+User does not have their KeyFile in the OFS yet, it will be pulled from the server.  The KeyRing will
+be used to authenticate with the Absio Broker application.  This will create an authenticated session on
+the ServerProvider and the OfsProvider.  If the KeyFile has not been stored in the OFS yet, you must supply
+the passphrase.
+This will throw an exception on failure.  When successful the session will be authenticated.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>AbsioError</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">logIn</span><span class="p">(</span><span class="nv">userId</span><span class="p">:</span> <span class="kt">UUID</span><span class="p">,</span> <span class="nv">password</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">passphrase</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Data</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">,</span> <span class="nv">errorHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">,</span> <span class="nv">queue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>userId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The user&rsquo;s ID.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>password</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Optional. The user&rsquo;s password.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>passphrase</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Optional. The user&rsquo;s backup credential passphrase. This is used if logging into a device for
+the first time or if the password is unavailable.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Completion Handler</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>errorHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Error Handler</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>queue</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Optional. Custom queue to run callback on. If not specified DispatchQueue.main queue will be used</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The encrypted KeyFile data</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AbsioSDKiOS22ServerCacheOfsProviderC5logIn7keyRing17completionHandler05errorM05queueACXD0a7CryptoiC003KeyK0V_yycys5Error_pcSo0c10_dispatch_O0CSgtKF"></a>
+                    <a name="//apple_ref/swift/Method/logIn(keyRing:completionHandler:errorHandler:queue:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AbsioSDKiOS22ServerCacheOfsProviderC5logIn7keyRing17completionHandler05errorM05queueACXD0a7CryptoiC003KeyK0V_yycys5Error_pcSo0c10_dispatch_O0CSgtKF">logIn(keyRing:<wbr>completionHandler:<wbr>errorHandler:<wbr>queue:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Uses the provided KeyRing to authenticate with the Absio Broker application.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>AbsioError</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">logIn</span><span class="p">(</span><span class="nv">keyRing</span><span class="p">:</span> <span class="kt">KeyRing</span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">,</span> <span class="nv">errorHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">,</span> <span class="nv">queue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>keyRing</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The user&rsquo;s private key ring.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Completion Handler</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>errorHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Error Handler</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>queue</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Optional. Custom queue to run callback on. If not specified DispatchQueue.main queue will be used</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AbsioSDKiOS22ServerCacheOfsProviderC8register8password10passphrase8reminder17completionHandler05errorM05queueACXDSS_S2SSgy10Foundation4DataVcys5Error_pcSo0c10_dispatch_O0CSgtKF"></a>
+                    <a name="//apple_ref/swift/Method/register(password:passphrase:reminder:completionHandler:errorHandler:queue:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AbsioSDKiOS22ServerCacheOfsProviderC8register8password10passphrase8reminder17completionHandler05errorM05queueACXDSS_S2SSgy10Foundation4DataVcys5Error_pcSo0c10_dispatch_O0CSgtKF">register(password:<wbr>passphrase:<wbr>reminder:<wbr>completionHandler:<wbr>errorHandler:<wbr>queue:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Registers a user on the Absio Broker application and then in the OFS.
+This will throw an exception on failure.  When successful the session will be authenticated.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>AbsioError</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">register</span><span class="p">(</span><span class="nv">password</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">passphrase</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">reminder</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Data</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">,</span> <span class="nv">errorHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">,</span> <span class="nv">queue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>password</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The password used to encrypt the KeyRing portion of the KeyFile.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>passphrase</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The passphrase used to encrypt the password portion of the KeyFile.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>reminder</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Optional.  The reminder.  This can be used to help remember the users passphrase.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The encrypted KeyFile data</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AbsioSDKiOS22ServerCacheOfsProviderC17changeCredentials8password10passphrase0K8Reminder17completionHandler05errorN05queueACXDSS_S2SSgy10Foundation4DataVcys5Error_pcSo0c10_dispatch_P0CSgtKF"></a>
+                    <a name="//apple_ref/swift/Method/changeCredentials(password:passphrase:passphraseReminder:completionHandler:errorHandler:queue:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AbsioSDKiOS22ServerCacheOfsProviderC17changeCredentials8password10passphrase0K8Reminder17completionHandler05errorN05queueACXDSS_S2SSgy10Foundation4DataVcys5Error_pcSo0c10_dispatch_P0CSgtKF">changeCredentials(password:<wbr>passphrase:<wbr>passphraseReminder:<wbr>completionHandler:<wbr>errorHandler:<wbr>queue:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This will change the credentials using the ServerProvider.  The resultant KeyFile bytes will be used to update the
+KeyFile in the Ofs using the OfsProviders OfsKeyFileMapper.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>AbsioError</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">changeCredentials</span><span class="p">(</span><span class="nv">password</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">passphrase</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">passphraseReminder</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Data</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">,</span> <span class="nv">errorHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">,</span> <span class="nv">queue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>password</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The new password</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>passphrase</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The new passphrase</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>passphraseReminder</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Optional.  The reminder to help a user recall their passphrase.  Defaults to null.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Completion Handler</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>errorHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Error Handler</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>queue</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Optional. Custom queue to run callback on. If not specified DispatchQueue.main queue will be used</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The encrypted KeyFile data</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AbsioSDKiOS22ServerCacheOfsProviderC9getEvents9eventType11containerId0lK005startM003endM017completionHandler05errorQ05queueACXDAA05EventK0OSg_10Foundation4UUIDVSgSSSgSiSgAUySayAA0T0VGcys5Error_pcSo0c10_dispatch_S0CSgtKF"></a>
+                    <a name="//apple_ref/swift/Method/getEvents(eventType:containerId:containerType:startId:endId:completionHandler:errorHandler:queue:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AbsioSDKiOS22ServerCacheOfsProviderC9getEvents9eventType11containerId0lK005startM003endM017completionHandler05errorQ05queueACXDAA05EventK0OSg_10Foundation4UUIDVSgSSSgSiSgAUySayAA0T0VGcys5Error_pcSo0c10_dispatch_S0CSgtKF">getEvents(eventType:<wbr>containerId:<wbr>containerType:<wbr>startId:<wbr>endId:<wbr>completionHandler:<wbr>errorHandler:<wbr>queue:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This will call GetEvents on the ServerProvider.
+Gets all ContainerEvents that match the action type, starting id, ending id, container id and type.
+No parameters are required.  If none are supplied this will return all ContainerEvents for all time for
+the authenticated user.  This can be used to synchronize accounts or keep a store up-to-date with the
+latest container activity related to the user.
+Calling this method requires an authenticated session.  See login for authenticating.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>AbsioError</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getEvents</span><span class="p">(</span><span class="nv">eventType</span><span class="p">:</span> <span class="kt"><a href="../Enums.html#/s:11AbsioSDKiOS9EventTypeO">EventType</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">containerId</span><span class="p">:</span> <span class="kt">UUID</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">containerType</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">startId</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">endId</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">([</span><span class="kt"><a href="../Structs/Event.html">Event</a></span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">,</span> <span class="nv">errorHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">,</span> <span class="nv">queue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>eventType</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The event types you are interested in.  Default is all actions</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>containerId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The container ID to get events for.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>containerType</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The type field value to get events for.  Only will return events with an exact match on the type.  Default is null, meaning all events.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>startId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The starting event id to process.  Defaults to the very first event.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>endId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The last event id to process.  Defaults to null, meaning get all events since the starting id.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Completion Handler</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>errorHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Error Handler</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>queue</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Optional. Custom queue to run callback on. If not specified DispatchQueue.main queue will be used</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A array of events that match the given criteria.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AbsioSDKiOS22ServerCacheOfsProviderC11getReminder6userId17completionHandler05errorM05queueACXD10Foundation4UUIDVSg_ySScys5Error_pcSo0c10_dispatch_O0CSgtKF"></a>
+                    <a name="//apple_ref/swift/Method/getReminder(userId:completionHandler:errorHandler:queue:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AbsioSDKiOS22ServerCacheOfsProviderC11getReminder6userId17completionHandler05errorM05queueACXD10Foundation4UUIDVSg_ySScys5Error_pcSo0c10_dispatch_O0CSgtKF">getReminder(userId:<wbr>completionHandler:<wbr>errorHandler:<wbr>queue:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This will call GetReminder on the ServerProvider. Gets the reminder for a user.  The reminder can be used to help a user recall their passphrase. If the session is authenticated the user ID is not required.  If not supplied the authenticated user&rsquo;s ID will be used.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>AbsioError</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getReminder</span><span class="p">(</span><span class="nv">userId</span><span class="p">:</span> <span class="kt">UUID</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">,</span> <span class="nv">errorHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">,</span> <span class="nv">queue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>userId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Optional.  The user ID.  If not supplied the authenticated user&rsquo;s ID will be used.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The user&rsquo;s reminder.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AbsioSDKiOS22ServerCacheOfsProviderC17needToSyncAccount6userId17completionHandler05errorO05queueACXD10Foundation4UUIDV_ySbcys5Error_pcSo0c10_dispatch_Q0CSgtKF"></a>
+                    <a name="//apple_ref/swift/Method/needToSyncAccount(userId:completionHandler:errorHandler:queue:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AbsioSDKiOS22ServerCacheOfsProviderC17needToSyncAccount6userId17completionHandler05errorO05queueACXD10Foundation4UUIDV_ySbcys5Error_pcSo0c10_dispatch_Q0CSgtKF">needToSyncAccount(userId:<wbr>completionHandler:<wbr>errorHandler:<wbr>queue:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This will check to see if the KeyFile stored in the OFS differs from the KeyFile stored on the Absio Broker application.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>AbsioError</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">needToSyncAccount</span><span class="p">(</span><span class="nv">userId</span><span class="p">:</span> <span class="kt">UUID</span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">,</span> <span class="nv">errorHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">,</span> <span class="nv">queue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>userId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The user ID of the account to check.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Completion Handler</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>errorHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Error Handler</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>queue</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Optional. Custom queue to run callback on. If not specified DispatchQueue.main queue will be used</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>True if the KeyFile stored in the OFS differs from the KeyFile stored on the Absio Broker application.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AbsioSDKiOS22ServerCacheOfsProviderC18synchronizeAccount10passphrase8password17completionHandler05errorM05queueACXDSS_SSSgyycys5Error_pcSo0c10_dispatch_O0CSgtKF"></a>
+                    <a name="//apple_ref/swift/Method/synchronizeAccount(passphrase:password:completionHandler:errorHandler:queue:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AbsioSDKiOS22ServerCacheOfsProviderC18synchronizeAccount10passphrase8password17completionHandler05errorM05queueACXDSS_SSSgyycys5Error_pcSo0c10_dispatch_O0CSgtKF">synchronizeAccount(passphrase:<wbr>password:<wbr>completionHandler:<wbr>errorHandler:<wbr>queue:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This pulls the KeyFile from the Absio Broker application, stores it into the OFS and then updates the KeyRing in use on the ServerProvider and the OfsProvider.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>AbsioError</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">synchronizeAccount</span><span class="p">(</span><span class="nv">passphrase</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">password</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">,</span> <span class="nv">errorHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">,</span> <span class="nv">queue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>passphrase</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The passphrase used to store the KeyFile on the Absio Broker application.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>password</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The password used to encrypt the KeyFile on the Absio Broker application.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Completion Handler</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>errorHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Error Handler</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>queue</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Optional. Custom queue to run callback on. If not specified DispatchQueue.main queue will be used</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2020 <a class="link" href="https://www.absio.com" target="_blank" rel="external">Absio</a>. All rights reserved. (Last updated: 2020-11-12)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
