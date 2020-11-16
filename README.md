@@ -25,7 +25,7 @@ pod 'AbsioSDK', '~> 1.0.0'
 ```
 
 #### **Note:**
-We are distributing fat libraries to support both simulator and different architectures. If you will have **issues with validation/submitting** your application to App Store. Please insert content of [cut-architectures.sh](cut-architectures.sh) into 'Build Phases' of your application with 'New Run Script Phase'. This will strip unused architectures for simulators and validation should went smooth.
+We are distributing fat libraries to support both simulator and different architectures. If you have any **issues with validation/submitting** your application to App Store, please insert content of [cut-architectures.sh](cut-architectures.sh) into 'Build Phases' of your application with 'New Run Script Phase'. This will strip unused architectures for simulators and validation should then go smooth.
 
 ## Getting started 
 Please see the detailed instructions in our [quick start guide](http://docs.absio.com/#quickstartstart)
@@ -39,6 +39,6 @@ The API reference is located at our Github [page](https://github.com/Absio/swift
 Please visit our license page at [absio.com](http://docs.absio.com/#licenselicense)
 
 ## Getting Help
-- Please contact us at support@absio.com if you experience issues, want to submit feedback, or have general questions about the technology
+- Please contact us at support@absio.com if you experience issues, want to submit feedback or have general questions about the technology
 
-- Have a bug to report? [Open an issue](https://github.com/Absio/swift-absio-secured-container/issues). If possible, include the version of Absio SDK, a full log, and description on how to reproduce.
+- Have a bug to report? [Open an issue](https://github.com/Absio/swift-absio-secured-container/issues). If possible, include the version of Absio SDK, a full log and description on how to reproduce.
