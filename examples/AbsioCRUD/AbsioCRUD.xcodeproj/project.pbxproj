@@ -1,0 +1,539 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		818C626C745B6D496B33E018 /* Pods_AbsioCRUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E69D35F8BBAF61016061DD8 /* Pods_AbsioCRUD.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		840A4611207EB8C1003C45F3 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840A4610207EB8C1003C45F3 /* RegistrationViewController.swift */; };
+		840A4613207F517D003C45F3 /* AbsioSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840A4612207F517D003C45F3 /* AbsioSession.swift */; };
+		840A4615207F58C3003C45F3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840A4614207F58C2003C45F3 /* MainViewController.swift */; };
+		840A4618207F87DE003C45F3 /* ContainerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840A4617207F87DE003C45F3 /* ContainerCell.swift */; };
+		841373F9207F919200442408 /* ContainerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841373F8207F919200442408 /* ContainerInfo.swift */; };
+		841373FC207FBC8F00442408 /* EditContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841373FB207FBC8F00442408 /* EditContainerViewController.swift */; };
+		841373FE2080E32800442408 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841373FD2080E32800442408 /* SettingsViewController.swift */; };
+		841374002080E7E500442408 /* ChangeCredentialsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841373FF2080E7E500442408 /* ChangeCredentialsViewController.swift */; };
+		841374022080F61400442408 /* AccessCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841374012080F61400442408 /* AccessCell.swift */; };
+		841374042080F68D00442408 /* AccessLevelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841374032080F68D00442408 /* AccessLevelListViewController.swift */; };
+		841374062080F80900442408 /* AccessViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841374052080F80900442408 /* AccessViewControler.swift */; };
+		841374082080F91700442408 /* PermissionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841374072080F91700442408 /* PermissionCell.swift */; };
+		84A440C5207E6A7B004601FD /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A440C4207E6A7B004601FD /* Utils.swift */; };
+		84B4A83C2088E9AF00845C5F /* AccessLevelEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B4A83B2088E9AF00845C5F /* AccessLevelEditViewController.swift */; };
+		84F9F1CC2072CC77003967EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F9F1CB2072CC77003967EF /* AppDelegate.swift */; };
+		84F9F1CE2072CC77003967EF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F9F1CD2072CC77003967EF /* LoginViewController.swift */; };
+		84F9F1D12072CC77003967EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84F9F1CF2072CC77003967EF /* Main.storyboard */; };
+		84F9F1D32072CC77003967EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84F9F1D22072CC77003967EF /* Assets.xcassets */; };
+		84F9F1D62072CC77003967EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84F9F1D42072CC77003967EF /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		90C79666209373AC00CF440C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2E69D35F8BBAF61016061DD8 /* Pods_AbsioCRUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AbsioCRUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		840A4610207EB8C1003C45F3 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		840A4612207F517D003C45F3 /* AbsioSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbsioSession.swift; sourceTree = "<group>"; };
+		840A4614207F58C2003C45F3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		840A4617207F87DE003C45F3 /* ContainerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerCell.swift; sourceTree = "<group>"; };
+		841373F8207F919200442408 /* ContainerInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerInfo.swift; sourceTree = "<group>"; };
+		841373FB207FBC8F00442408 /* EditContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditContainerViewController.swift; sourceTree = "<group>"; };
+		841373FD2080E32800442408 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		841373FF2080E7E500442408 /* ChangeCredentialsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeCredentialsViewController.swift; sourceTree = "<group>"; };
+		841374012080F61400442408 /* AccessCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessCell.swift; sourceTree = "<group>"; };
+		841374032080F68D00442408 /* AccessLevelListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessLevelListViewController.swift; sourceTree = "<group>"; };
+		841374052080F80900442408 /* AccessViewControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessViewControler.swift; sourceTree = "<group>"; };
+		841374072080F91700442408 /* PermissionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionCell.swift; sourceTree = "<group>"; };
+		84A440C4207E6A7B004601FD /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		84B4A83B2088E9AF00845C5F /* AccessLevelEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessLevelEditViewController.swift; sourceTree = "<group>"; };
+		84F9F1C82072CC77003967EF /* AbsioCRUD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AbsioCRUD.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84F9F1CB2072CC77003967EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		84F9F1CD2072CC77003967EF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		84F9F1D02072CC77003967EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		84F9F1D22072CC77003967EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		84F9F1D52072CC77003967EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		84F9F1D72072CC77003967EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90C7964720936ECD00CF440C /* AbsioESQLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AbsioESQLite.framework; path = Pods/AbsioSDK/AbsioSDK/ios/AbsioESQLite.framework; sourceTree = "<group>"; };
+		90C7964820936ECD00CF440C /* AbsioESQLiteWrapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AbsioESQLiteWrapper.framework; path = Pods/AbsioSDK/AbsioSDK/ios/AbsioESQLiteWrapper.framework; sourceTree = "<group>"; };
+		90C7964920936ECE00CF440C /* AbsioSDKiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AbsioSDKiOS.framework; path = Pods/AbsioSDK/AbsioSDK/ios/AbsioSDKiOS.framework; sourceTree = "<group>"; };
+		90C7964A20936ECE00CF440C /* AbsioCrypto.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AbsioCrypto.framework; path = Pods/AbsioSDK/AbsioSDK/ios/AbsioCrypto.framework; sourceTree = "<group>"; };
+		90C7964B20936ECE00CF440C /* OpenSSL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenSSL.framework; path = Pods/AbsioSDK/AbsioSDK/ios/OpenSSL.framework; sourceTree = "<group>"; };
+		A771B0DAC611D378B6FF9416 /* Pods-AbsioCRUD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AbsioCRUD.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AbsioCRUD/Pods-AbsioCRUD.debug.xcconfig"; sourceTree = "<group>"; };
+		A7F4C979981F2C68C02EFCB1 /* Pods-AbsioCRUD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AbsioCRUD.release.xcconfig"; path = "Pods/Target Support Files/Pods-AbsioCRUD/Pods-AbsioCRUD.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		84F9F1C52072CC77003967EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				818C626C745B6D496B33E018 /* Pods_AbsioCRUD.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		153C85EFFD649157B3DAE3BC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A771B0DAC611D378B6FF9416 /* Pods-AbsioCRUD.debug.xcconfig */,
+				A7F4C979981F2C68C02EFCB1 /* Pods-AbsioCRUD.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		55A11F7C70BD249291D8CAB8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				90C7964A20936ECE00CF440C /* AbsioCrypto.framework */,
+				90C7964720936ECD00CF440C /* AbsioESQLite.framework */,
+				90C7964820936ECD00CF440C /* AbsioESQLiteWrapper.framework */,
+				90C7964920936ECE00CF440C /* AbsioSDKiOS.framework */,
+				90C7964B20936ECE00CF440C /* OpenSSL.framework */,
+				2E69D35F8BBAF61016061DD8 /* Pods_AbsioCRUD.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		840A4616207F87D0003C45F3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				840A4617207F87DE003C45F3 /* ContainerCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		841373F7207F915300442408 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				841373F8207F919200442408 /* ContainerInfo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		84F9F1BF2072CC77003967EF = {
+			isa = PBXGroup;
+			children = (
+				84F9F1CA2072CC77003967EF /* AbsioCRUD */,
+				84F9F1C92072CC77003967EF /* Products */,
+				153C85EFFD649157B3DAE3BC /* Pods */,
+				55A11F7C70BD249291D8CAB8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		84F9F1C92072CC77003967EF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84F9F1C82072CC77003967EF /* AbsioCRUD.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		84F9F1CA2072CC77003967EF /* AbsioCRUD */ = {
+			isa = PBXGroup;
+			children = (
+				841373F7207F915300442408 /* Models */,
+				840A4616207F87D0003C45F3 /* Views */,
+				84F9F1CB2072CC77003967EF /* AppDelegate.swift */,
+				84F9F1CD2072CC77003967EF /* LoginViewController.swift */,
+				84F9F1CF2072CC77003967EF /* Main.storyboard */,
+				84F9F1D22072CC77003967EF /* Assets.xcassets */,
+				84F9F1D42072CC77003967EF /* LaunchScreen.storyboard */,
+				84F9F1D72072CC77003967EF /* Info.plist */,
+				84A440C4207E6A7B004601FD /* Utils.swift */,
+				840A4610207EB8C1003C45F3 /* RegistrationViewController.swift */,
+				840A4612207F517D003C45F3 /* AbsioSession.swift */,
+				840A4614207F58C2003C45F3 /* MainViewController.swift */,
+				841373FB207FBC8F00442408 /* EditContainerViewController.swift */,
+				841373FD2080E32800442408 /* SettingsViewController.swift */,
+				841373FF2080E7E500442408 /* ChangeCredentialsViewController.swift */,
+				841374012080F61400442408 /* AccessCell.swift */,
+				841374032080F68D00442408 /* AccessLevelListViewController.swift */,
+				841374052080F80900442408 /* AccessViewControler.swift */,
+				841374072080F91700442408 /* PermissionCell.swift */,
+				84B4A83B2088E9AF00845C5F /* AccessLevelEditViewController.swift */,
+			);
+			path = AbsioCRUD;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		84F9F1C72072CC77003967EF /* AbsioCRUD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84F9F1DA2072CC77003967EF /* Build configuration list for PBXNativeTarget "AbsioCRUD" */;
+			buildPhases = (
+				8F6124C81BF0EBA90BA3DD12 /* [CP] Check Pods Manifest.lock */,
+				84F9F1C42072CC77003967EF /* Sources */,
+				84F9F1C52072CC77003967EF /* Frameworks */,
+				84F9F1C62072CC77003967EF /* Resources */,
+				F00D9D817EA0BADBCDC7ABED /* [CP] Embed Pods Frameworks */,
+				90C79666209373AC00CF440C /* Embed Frameworks */,
+				906DF10020B847EF007C5621 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AbsioCRUD;
+			productName = AbsioCRUD;
+			productReference = 84F9F1C82072CC77003967EF /* AbsioCRUD.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		84F9F1C02072CC77003967EF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 1170;
+				ORGANIZATIONNAME = Absio;
+				TargetAttributes = {
+					84F9F1C72072CC77003967EF = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 84F9F1C32072CC77003967EF /* Build configuration list for PBXProject "AbsioCRUD" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 84F9F1BF2072CC77003967EF;
+			productRefGroup = 84F9F1C92072CC77003967EF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				84F9F1C72072CC77003967EF /* AbsioCRUD */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		84F9F1C62072CC77003967EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84F9F1D62072CC77003967EF /* LaunchScreen.storyboard in Resources */,
+				84F9F1D32072CC77003967EF /* Assets.xcassets in Resources */,
+				84F9F1D12072CC77003967EF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8F6124C81BF0EBA90BA3DD12 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AbsioCRUD-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		906DF10020B847EF007C5621 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/bash\n\n# This script gets executed from Xcode to fixup the embedded frameworks and\n# bundle the necessary architectures.\n\n\nAPP_PATH=\"${TARGET_BUILD_DIR}/${WRAPPER_NAME}\"\n\n# This script loops through the frameworks embedded in the application and\n# removes unused architectures.\nfind \"$APP_PATH\" -name '*.framework' -type d | while read -r FRAMEWORK\ndo\nFRAMEWORK_EXECUTABLE_NAME=$(defaults read \"$FRAMEWORK/Info.plist\" CFBundleExecutable)\nFRAMEWORK_EXECUTABLE_PATH=\"$FRAMEWORK/$FRAMEWORK_EXECUTABLE_NAME\"\necho \"Executable is $FRAMEWORK_EXECUTABLE_PATH\"\n\nEXTRACTED_ARCHS=()\n\nfor ARCH in $ARCHS\ndo\nif lipo -info \"$FRAMEWORK_EXECUTABLE_PATH\" | grep -q -v \"^Non-fat\"\nthen\necho \"Extracting $ARCH from $FRAMEWORK_EXECUTABLE_NAME\"\nlipo -extract \"$ARCH\" \"$FRAMEWORK_EXECUTABLE_PATH\" -o \"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\"\nEXTRACTED_ARCHS+=(\"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\")\nfi\ndone\n\nif [ -n \"$EXTRACTED_ARCHS\" ]\nthen\necho \"Merging extracted architectures: ${ARCHS}\"\nlipo -o \"$FRAMEWORK_EXECUTABLE_PATH-merged\" -create \"${EXTRACTED_ARCHS[@]}\"\nrm \"${EXTRACTED_ARCHS[@]}\"\n\necho \"Replacing original executable with thinned version\"\nrm \"$FRAMEWORK_EXECUTABLE_PATH\"\nmv \"$FRAMEWORK_EXECUTABLE_PATH-merged\" \"$FRAMEWORK_EXECUTABLE_PATH\"\nfi\ndone";
+		};
+		F00D9D817EA0BADBCDC7ABED /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AbsioCRUD/Pods-AbsioCRUD-frameworks.sh",
+				"${PODS_ROOT}/AbsioCrypto/AbsioCrypto/ios/AbsioCryptoiOS.framework",
+				"${PODS_ROOT}/AbsioCrypto/AbsioCrypto/ios/OpenSSL.framework",
+				"${PODS_ROOT}/AbsioSDK/AbsioSDK/ios/AbsioSDKiOS.framework",
+				"${PODS_ROOT}/AbsioSDK/AbsioSDK/ios/AbsioESQLite.framework",
+				"${PODS_ROOT}/AbsioSDK/AbsioSDK/ios/AbsioESQLiteWrapper.framework",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AbsioCryptoiOS.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OpenSSL.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AbsioSDKiOS.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AbsioESQLite.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AbsioESQLiteWrapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AbsioCRUD/Pods-AbsioCRUD-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		84F9F1C42072CC77003967EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				840A4613207F517D003C45F3 /* AbsioSession.swift in Sources */,
+				841374022080F61400442408 /* AccessCell.swift in Sources */,
+				84F9F1CE2072CC77003967EF /* LoginViewController.swift in Sources */,
+				841374062080F80900442408 /* AccessViewControler.swift in Sources */,
+				840A4618207F87DE003C45F3 /* ContainerCell.swift in Sources */,
+				84B4A83C2088E9AF00845C5F /* AccessLevelEditViewController.swift in Sources */,
+				841374042080F68D00442408 /* AccessLevelListViewController.swift in Sources */,
+				841373FE2080E32800442408 /* SettingsViewController.swift in Sources */,
+				841374082080F91700442408 /* PermissionCell.swift in Sources */,
+				84F9F1CC2072CC77003967EF /* AppDelegate.swift in Sources */,
+				840A4615207F58C3003C45F3 /* MainViewController.swift in Sources */,
+				841373F9207F919200442408 /* ContainerInfo.swift in Sources */,
+				840A4611207EB8C1003C45F3 /* RegistrationViewController.swift in Sources */,
+				841373FC207FBC8F00442408 /* EditContainerViewController.swift in Sources */,
+				84A440C5207E6A7B004601FD /* Utils.swift in Sources */,
+				841374002080E7E500442408 /* ChangeCredentialsViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		84F9F1CF2072CC77003967EF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84F9F1D02072CC77003967EF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		84F9F1D42072CC77003967EF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84F9F1D52072CC77003967EF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		84F9F1D82072CC77003967EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/Frameworks @loader_path/../Frameworks @executable_path/Frameworks @executable_path/../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		84F9F1D92072CC77003967EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/Frameworks @loader_path/../Frameworks @executable_path/Frameworks @executable_path/../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		84F9F1DB2072CC77003967EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A771B0DAC611D378B6FF9416 /* Pods-AbsioCRUD.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XPX972CU7W;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = AbsioCRUD/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../Frameworks @loader_path/Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		84F9F1DC2072CC77003967EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7F4C979981F2C68C02EFCB1 /* Pods-AbsioCRUD.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XPX972CU7W;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = AbsioCRUD/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../Frameworks @loader_path/Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		84F9F1C32072CC77003967EF /* Build configuration list for PBXProject "AbsioCRUD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84F9F1D82072CC77003967EF /* Debug */,
+				84F9F1D92072CC77003967EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84F9F1DA2072CC77003967EF /* Build configuration list for PBXNativeTarget "AbsioCRUD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84F9F1DB2072CC77003967EF /* Debug */,
+				84F9F1DC2072CC77003967EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 84F9F1C02072CC77003967EF /* Project object */;
+}

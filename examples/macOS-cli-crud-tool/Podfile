@@ -1,0 +1,7 @@
+target 'macOS-cli-crud-tool' do
+  use_frameworks!
+  platform :osx, '10.14'
+  pod 'AbsioSDK', '1.0.0'
+  pod 'RainbowSwift', '~> 3.0.0'
+  pod 'Swiftline', :git => 'https://github.com/pakmee/Swiftline.git', :branch => 'master'
+end

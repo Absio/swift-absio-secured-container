@@ -1,0 +1,5 @@
+target 'AbsioCRUD' do
+  use_frameworks!
+  platform :ios, '12.0'  
+  pod 'AbsioSDK', '1.0.0'
+end

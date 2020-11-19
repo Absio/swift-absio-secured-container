@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VmD-ak-N7b">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="fAm-BU-KuH">
+            <objects>
+                <viewController id="VmD-ak-N7b" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kd1-97-nN9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchLogo" translatesAutoresizingMaskIntoConstraints="NO" id="gFt-B6-yDu">
+                                <rect key="frame" x="157.5" y="303.5" width="60" height="60"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gFt-B6-yDu" firstAttribute="centerX" secondItem="Kd1-97-nN9" secondAttribute="centerX" id="GUo-r1-bZJ"/>
+                            <constraint firstItem="gFt-B6-yDu" firstAttribute="centerY" secondItem="Kd1-97-nN9" secondAttribute="centerY" id="PCF-rI-tfk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fmZ-Ks-NBa"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dKW-SU-Cjc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-26" y="-425"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="LaunchLogo" width="60" height="60"/>
+    </resources>
+</document>
