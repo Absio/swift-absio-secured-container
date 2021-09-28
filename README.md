@@ -11,7 +11,7 @@ General technology overview and toolset can be found [here](http://docs.absio.co
 
 - iOS 12.0 and higher
 - macOs 10.14 and higher
-- Xcode 11.7 and higher
+- Xcode 12.5 and higher
 - Swift 5 and higher
 
 ## Installation 
@@ -21,7 +21,7 @@ If you are new to using pods please visit getting started [page](https://guides.
 To get our pod instantly please use line below
 
 ```ruby
-pod 'AbsioSDK', '~> 1.0.0'
+pod 'AbsioSDK', '~> 1.1.0'
 ```
 
 #### **Note:**
